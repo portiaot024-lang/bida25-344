@@ -509,3 +509,9 @@ h1, h2, h3,p{
   }
 }
  
+.product-img {
+  width: 250p;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
