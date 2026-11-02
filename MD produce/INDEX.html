@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- HEAD: page title and link to the stylesheet (style.css) -->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Home | Madu Produce</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <!-- TOP BAR: logo + navigation menu to all 7 pages -->
+    <header class="top">
+      <a class="brand" href="index.html">
+        <svg viewBox="0 0 40 40" width="38" height="38" aria-hidden="true">
+          <path d="M20 36V18" stroke="#2e7d4f" stroke-width="3" stroke-linecap="round"/>
+          <path d="M20 20C8 20 6 10 6 6c10 0 14 4 14 14zM20 24c10 0 14-6 14-12-9 0-14 4-14 12z" fill="#2e7d4f"/>
+        </svg>
+        <span>
+          <b>MADU PRODUCE</b>
+          <small>Fresh · Local · Sustainable</small>
+        </span>
+      </a>
+      <button class="burger" aria-label="Menu" aria-expanded="false">☰</button>
+      <!-- NAVIGATION: 'active' marks the page you are on -->
+      <nav id="nav">
+        <a href="index.html" class=active aria-current=page>Home</a>
+        <a href="about.html">About Us</a>
+        <a href="products.html">Products</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact Us</a>
+      </nav>
+    </header>
+    <main>
+      <!-- HERO: background photo, looping video, headline and button -->
+      <section class="hero vid">
+        <!-- VIDEO: plays by itself, muted, in a loop.-->
+        <video class="hv" autoplay muted loop playsinline preload="auto">
+          <source src="hero,mp4.mp4" type="video/mp4">
+        </video>
+        <div class="shade">
+        </div>
+        <!-- HERO TEXT: headline, sentence and button over the video -->
+        <div class="hin">
+          <h1>Fresh from Our Farm to Your Table</h1>
+          <p>Quality, locally grown agricultural produce for a healthier tomorrow.</p>
+          <a class="btn" href="products.html">Explore Our Products ›</a>
+        </div>
+      </section>
+      <!-- FOUR FEATURE BOXES -->
+<div class="g4">
+  <div class="fc">
+    <img class="fc-image" src="https://images.unsplash.com/photo-1592924357228-91a4daadcfea?w=600&q=80" alt="Fresh Tomatoes">
+    <h3>Fresh Produce</h3>
+    <p>Locally grown, high quality fresh vegetables daily.</p>
+  </div>
+  <div class="fc">
+    <img class="fc-image" src="images/farm.jpg" alt="Sustainable Farming">
+    <h3>Sustainable Farming</h3>
+    <p>Good for people and the planet with drip irrigation.</p>
+  </div>
+  <div class="fc">
+    <img class="fc-image" src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=600&q=80" alt="Community">
+    <h3>Community Support</h3>
+    <p>Supporting local farmers and families.</p>
+  </div>
+  <div class="fc">
+    <img class="fc-image" src="https://images.unsplash.com/photo-1518843875459-f738682238a6?w=600&q=80" alt="Quality">
+    <h3>Trusted Quality</h3>
+    <p>Freshness you can count on every time.</p>
+  </div>
+</div>
+      <section class="sec">
+        <h2 class="kick">Featuto">
+              <img src="https://images.unsplash.com/photo-1568581789190-ae90a7da930b?auto=format&fit=crop&w=800&q=70" alt="Tomatoes" onerror="if(!this.dataset.f){this.dataset.f=1;this.src='images/tomato.jpg'}else this.remove()">
+            </div>
+            <h3>Tomatoes</h3>
+            <p>Juicy, vine-ripened tomatoes.</p>
+            <div class="pr">
+              <b>P20/kg</b>
+              <span class="stock">In Stock</span>
+            </div>
+          </article>
+          <article class="pc" data-cat="Vegetables">
+            <div class="pimg pepper">
+              <img src="https://images.unsplash.com/photo-1592548868664-f8b4e4b1cfb7?auto=format&fit=crop&w=800&q=70" alt="Green Pepper" onerror="if(!this.dataset.f){this.dataset.f=1;this.src='images/pepper.jpg'}else this.remove()">
+            </div>
+            <h3>Green Pepper</h3>
+            <p>Crisp and fresh green peppers.</p>
+            <div class="pr">
+              <b>P25/kg</b>
+              <span class="stock">In Stock</span>
+            </div>
+          </article>
+          <article class="pc" data-cat="Vegetables">
+            <div class="pimg onion">
+              <img src="https://images.unsplash.com/photo-1571167002474-17b083c46f90?auto=format&fit=crop&w=800&q=70" alt="Onions" onerror="if(!this.dataset.f){this.dataset.f=1;this.src='images/onion.jpg'}else this.remove()">
+            </div>
+            <h3>Onions</h3>
+            <p>Flavourful onions, ideal for cooking.</p>
+            <div class="pr">
+              <b>P14/kg</b>
+              <span class="stock">In Stock</span>
+            </div>
+          </article>
+          <article class="pc" data-cat="Vegetables">
+            <div class="pimg carrot">
+              <img src="https://images.unsplash.com/photo-1687199126330-556bb3c85b2f?auto=format&fit=crop&w=800&q=70" alt="Carrots" onerror="if(!this.dataset.f){this.dataset.f=1;this.src='images/carrot.jpg'}else this.remove()">
+            </div>
+            <h3>Carrots</h3>
+            <p>Sweet and crunchy carrots.</p>
+            <div class="pr">
+              <b>P16/kg</b>
+              <span class="stock">In Stock</span>
+            </div>
+          </article>
+        </div>
+        <p>
+          <a class="btn" href="products.html">View All Products ›</a>
+        </p>
+      </section>
+      <section class="mv">
+        <div>
+          <span class="ic w">🌿</span>
+          <h3>Our Mission</h3>
+          <p>Madu Produce builds a positive relationship between farmers and consumers by making sure fresh produce reaches valued customers in a sustainable and reliable way.</p>
+        </div>
+        <div>
+          <span class="ic w">👁</span>
+          <h3>Our Vision</h3>
+          <p>To become a trusted and leading local agricultural produce business, recognised for fresh quality products and for contributing to the economy’s agricultural sector.</p>
+        </div>
+      </section>
+    </main>
+    <!-- PREVIOUS / HOME / NEXT page links -->
+    <div class="pager">
+      <a href="sitemap.html">‹ Site Map</a>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us ›</a>
+    </div>
+    <!-- FOOTER: contact details, quick links, social icons -->
+    <footer>
+      <div class="fgrid">
+        <div>
+          <div class="brand light">
+            <svg viewBox="0 0 40 40" width="38" height="38" aria-hidden="true">
+              <path d="M20 36V18" stroke="#2e7d4f" stroke-width="3" stroke-linecap="round"/>
+              <path d="M20 20C8 20 6 10 6 6c10 0 14 4 14 14zM20 24c10 0 14-6 14-12-9 0-14 4-14 12z" fill="#2e7d4f"/>
+            </svg>
+            <span>
+              <b>MADU PRODUCE</b>
+              <small>Fresh · Local · Sustainable</small>
+            </span>
+          </div>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <p>+267 71 234 567<br>info@maduproduce.co.bw<br>Plot 123, Gaborone, Botswana</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <div class="ql">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="products.html">Products</a>
+            <a href="services.html">Services</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="sitemap.html">Site Map</a>
+          </div>
+        </div>
+        <div>
+          <h4>Follow Us</h4>
+          <div class="soc">
+            <a href="#" aria-label="Facebook">f</a>
+            <a href="#" aria-label="Instagram">◎</a>
+            <a href="#" aria-label="YouTube">▶</a>
+          </div>
+        </div>
+      </div>
+      <p class="copy">© 2025 Madu Produce. All rights reserved. <i>Grow Together · Support Local · A Greener Future</i>
+      </p>
+    </footer>
+    <!-- JAVASCRIPT: mobile menu button, filters, contact form -->
+    <script src="app.js">
+    </script>
+  </body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Gallery | Madu Produce</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header class="top">
+      <a class="brand" href="index.html">
+        <svg viewBox="0 0 40 40" width="38" height="38" aria-hidden="true">
+          <path d="M20 36V18" stroke="#2e7d4f" stroke-width="3" stroke-linecap="round"/>
+          <path d="M20 20C8 20 6 10 6 6c10 0 14 4 14 14zM20 24c10 0 14-6 14-12-9 0-14 4-14 12z" fill="#2e7d4f"/>
+        </svg>
+        <span>
+          <b>MADU PRODUCE</b>
+          <small>Fresh · Local · Sustainable</small>
+        </span>
+      </a>
+      <button class="burger" aria-label="Menu" aria-expanded="false">☰</button>
+      <nav id="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="products.html">Products</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html" class=active aria-current=page>Gallery</a>
+        <a href="contact.html">Contact Us</a>
+      </nav>
+    </header>
+    <main>
+      <section class="hero">
+        <img class="scene" src="https://images.unsplash.com/photo-1743417158789-a4f4e8365b13?auto=format&fit=crop&w=1600&q=70" alt="" onerror="if(!this.dataset.f){this.dataset.f=1;this.src='images/hero-gallery.jpg'}else this.remove()">
+        <div class="shade">
+        </div>
+        <div class="hin">
+          <h1>Our Gallery</h1>
+          <p>A look at our farm, produce and community.</p>
+        </div>
+      </section>
+      <section class="sec">
+        <div class="tabs">
+          <button class="tab on" data-f="All">All</button>
+          <button class="tab" data-f="Farms">Farms</button>
+          <button class="tab" data-f="Produce">Produce</button>
+          <button class="tab" data-f="Packaging">Packaging</button>
+          <button class="tab" data-f="Team">Team</button>
+        </div>
+        <div class="g4" id="grid">
+          <div class="pc gi" data-cat="Farms">
+            <figure class="ph g-farm">
+              <img src="https://images.unsplash.com/photo-1689291960891-fbcfe4f96aa4?auto=format&fit=crop&w=800&q=70" alt="Farm View" onerror="if(!this.dataset.f){this.dataset.f=1;this.src='images/farm.jpg'}else this.remove()">
+              <figcaption>Farm View</figcaption>
+            </figure>
+          </div>
+          <div class="pc gi" data-cat="Farms">
+            <figure class="ph g-harvest">
+              <img src="https://images.unsplash.com/photo-1526865906320-0200a6e2c7f0?auto=format&fit=crop&w=800&q=70" alt="Harvesting" onerror="if(!this.dataset.f){this.dataset.f=1;this.src='images/harvest.jpg'}else this.remove()">
+              <figcaption>Harvesting</figcaption>
+            </figure>
+          </div>
+          <div class="pc gi" data-cat="Produce">
+            <figure class="ph g-produce">
+              <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=800&q=70" alt="Fresh Produce" onerror="if(!this.dataset.f){this.dataset.f=1;this.src='images/produce.jpg'}else this.remove()">
+              <figcaption>Fresh Produce</figcaption>
+            </figure>
+          </div>
+          <div class="pc gi" data-cat="Packaging">
+            <figure class="ph g-pack">
+              <img src="https://images.unsplash.com/photo-1657288089316-c0350003ca49?auto=format&fit=crop&w=800&q=70" alt="Packaging" onerror="if(!this.dataset.f){this.dataset.f=1;this.src='images/pack.jpg'}else this.remove()">
+              <figcaption>Packaging</figcaption>
+            </figure>
+          </div>
+          <div class="pc gi" data-cat="Team">
+            <figure class="ph g-team">
+              <img src="https://images.unsplash.com/photo-1551649001-7a2482d98d05?auto=format&fit=crop&w=800&q=70" alt="Our Team" onerror="if(!this.dataset.f){this.dataset.f=1;this.src='images/team.jpg'}else this.remove()">
+              <figcaption>Our Team</figcaption>
+            </figure>
+          </div>
+          <div class="pc gi" data-cat="Farms">
+            <figure class="ph g-life">
+              <img src="https://images.unsplash.com/photo-1621459555843-9a77f1d03fae?auto=format&fit=crop&w=800&q=70" alt="Farm Life" onerror="if(!this.dataset.f){this.dataset.f=1;this.src='images/life.jpg'}else this.remove()">
+              <figcaption>Farm Life</figcaption>
+            </figure>
+          </div>
+          <div class="pc gi" data-cat="Produce">
+            <figure class="ph g-market">
+              <img src="https://images.unsplash.com/photo-1624668430039-0175a0fbf006?auto=format&fit=crop&w=800&q=70" alt="Local Market" onerror="if(!this.dataset.f){this.dataset.f=1;this.src='images/market.jpg'}else this.remove()">
+              <figcaption>Local Market</figcaption>
+            </figure>
+          </div>
+          <div class="pc gi" data-cat="Farms">
+            <figure class="ph g-crops">
+              <img src="https://images.unsplash.com/uploads/141247613151541c06062/c15fb37d?auto=format&fit=crop&w=800&q=70" alt="Crop Fields" onerror="if(!this.dataset.f){this.dataset.f=1;this.src='images/crops.jpg'}else this.remove()">
+              <figcaption>Crop Fields</figcaption>
+            </figure>
+          </div>
+        </div>
+        <p class="note">Drop real photos into the images/ folder using these file names (e.g. farm.jpg) and they replace the illustrations automatically.</p>
+      </section>
+    </main>
+    <div class="pager">
+      <a href="services.html">‹ Services</a>
+      <a href="index.html">Home</a>
+      <a href="contact.html">Contact Us ›</a>
+    </div>
+    <footer>
+      <div class="fgrid">
+        <div>
+          <div class="brand light">
+            <svg viewBox="0 0 40 40" width="38" height="38" aria-hidden="true">
+              <path d="M20 36V18" stroke="#2e7d4f" stroke-width="3" stroke-linecap="round"/>
+              <path d="M20 20C8 20 6 10 6 6c10 0 14 4 14 14zM20 24c10 0 14-6 14-12-9 0-14 4-14 12z" fill="#2e7d4f"/>
+            </svg>
+            <span>
+              <b>MADU PRODUCE</b>
+              <small>Fresh · Local · Sustainable</small>
+            </span>
+          </div>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <p>+267 71 234 567<br>info@maduproduce.co.bw<br>Plot 123, Gaborone, Botswana</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <div class="ql">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="products.html">Products</a>
+            <a href="services.html">Services</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="sitemap.html">Site Map</a>
+          </div>
+        </div>
+        <div>
+          <h4>Follow Us</h4>
+          <div class="soc">
+            <a href="#" aria-label="Facebook">f</a>
+            <a href="#" aria-label="Instagram">◎</a>
+            <a href="#" aria-label="YouTube">▶</a>
+          </div>
+        </div>
+      </div>
+      <p class="copy">© 2025 Madu Produce. All rights reserved. <i>Grow Together · Support Local · A Greener Future</i>
+      </p>
+    </footer>
+    <script src="app.js">
+    </script>
+  </body>
+</html>

@@ -1,0 +1,878 @@
+/* ==========================================================================
+   MADU PRODUCE - style.css  (one file for all 7 pages)
+
+   CONTENTS
+   1. SHARED ON EVERY PAGE   colours, text, menu, hero banner, buttons, footer
+   2. HOME PAGE              hero video, Mission and Vision
+   3. ABOUT US PAGE          text + photo, Our Story
+   4. PRODUCTS PAGE          product cards, filter tabs
+   5. SERVICES PAGE          Why Choose Us, bottom banner
+   6. GALLERY PAGE           picture tiles
+   7. CONTACT PAGE           form, map box, social icons
+   8. SITE MAP PAGE          page list boxes
+   9. JAVASCRIPT SECTION     everything app.js adds + button hover effects
+   ========================================================================== */
+
+/* ==========================================================
+   SHARED ON EVERY PAGE: colours, text, top bar and menu, hero banner, buttons, boxes, footer, phone layout
+   ========================================================== */
+
+:root {
+  --g:#1f6b3f;
+  --gd:#0f4a2b;
+  --gl:#e8f3ec;
+  --ink:#1d2b22;
+  --mut:#566559;
+  --sun:#e2a72e;
+  --bg:#f6faf6;
+}
+
+* {
+  box-sizing:border-box;
+}
+
+body {
+  margin:0;
+  font:16px/1.6 "Segoe UI",system-ui,sans-serif;
+  color:var(--ink);
+  background:var(--bg);
+}
+
+main,.top,footer,.pager {
+  max-width:1000px;
+  margin:0 auto;
+}
+
+a {
+  color:inherit;
+}
+
+h1,h2,h3 {
+  line-height:1.15;
+  margin:0 0 10px;
+}
+
+.top {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:14px 20px;
+  position:sticky;
+  top:0;
+  background:var(--bg);
+  z-index:20;
+  flex-wrap:wrap;
+}
+
+.brand {
+  display:flex;
+  gap:10px;
+  align-items:center;
+  text-decoration:none;
+}
+
+.brand span {
+  display:flex;
+  flex-direction:column;
+  line-height:1.1;
+}
+
+.brand small {
+  font-size:.65rem;
+  color:var(--mut);
+}
+
+nav a {
+  margin-left:18px;
+  text-decoration:none;
+  font-size:.9rem;
+  padding-bottom:3px;
+}
+
+nav a.active {
+  color:var(--g);
+  border-bottom:2px solid var(--g);
+}
+
+nav a:hover {
+  color:var(--g);
+}
+
+.burger {
+  display:none;
+  background:none;
+  border:1px solid #bcd;
+  border-radius:8px;
+  font-size:1.3rem;
+  padding:2px 10px;
+}
+
+
+
+.hin h1 {
+  font-size:clamp(2rem,6vw,3.2rem);
+}
+
+.hin p {
+  margin:0 0 20px;
+  font-size:1.1rem;
+}
+
+.btn {
+  display:inline-block;
+  background:var(--g);
+  color:#fff;
+  padding:11px 22px;
+  border-radius:999px;
+  text-decoration:none;
+  border:0;
+  font:inherit;
+  cursor:pointer;
+}
+.hero {
+  position: relative !important;
+  overflow: hidden !important;
+  isolation: isolate;
+  min-height: 520px;
+  display: grid;
+  place-items: center;
+  padding: 36px 20px;
+}
+
+.hero_cta {
+  background: linear-gradient(135deg, #1f6f0f, #2e7d32);
+  color: white;
+  border: 0;
+  padding: 14px 28px;
+  border-radius: 16px;
+  font-weight: 700;
+}
+
+.hero > :first-child {
+  min-height: 420px;
+  width: 100%;
+}
+
+.scene_bv {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+.shade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(10,45,25,.8), rgba(10,45,25,.3));
+  z-index: -1;
+}
+.btn:hover,.btn:focus-visible {
+  background:var(--gd);
+}
+
+.sec {
+  padding:36px 20px;
+}
+
+.sec h2 {
+  font-size:1.9rem;
+}
+
+.g4 {
+  position: relative !important;
+  z-index: 2 !important;
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)) !important;
+  gap: 20px !important;
+  padding: 40px 20px !important;
+  clear: both !important;
+}s
+.fc {
+  background:var(--gl);
+  border-radius:12px;
+  padding:18px;
+  text-align:center;
+}
+
+.fc p {
+  margin:0;
+  color:var(--mut);
+  font-size:.92rem;
+}
+
+.ic {
+  font-size:1.8rem;
+  display:block;
+  margin-bottom:6px;
+}
+
+.soc {
+  display:flex;
+  gap:10px;
+}
+
+.soc a {
+  width:36px;
+  height:36px;
+  border-radius:50%;
+  background:#fff;
+  color:var(--gd);
+  display:grid;
+  place-items:center;
+  text-decoration:none;
+  font-weight:700;
+}
+
+.pager {
+  display:flex;
+  justify-content:space-between;
+  padding:10px 20px 24px;
+}
+
+.pager a {
+  text-decoration:none;
+  color:var(--g);
+  font-weight:600;
+}
+
+footer {
+  background:var(--gd);
+  color:#fff;
+  border-radius:14px 14px 0 0;
+  padding:28px 24px 14px;
+}
+
+footer h4 {
+  margin:0 0 8px;
+}
+
+footer p {
+  margin:0;
+  font-size:.88rem;
+}
+
+.fgrid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(170px,1fr));
+  gap:20px;
+}
+
+.ql {
+  display:grid;
+  font-size:.88rem;
+}
+
+.ql a {
+  text-decoration:none;
+  opacity:.9;
+}
+
+.copy {
+  margin-top:20px!important;
+  font-size:.78rem!important;
+  opacity:.8;
+}
+
+.brand.light small {
+  color:#cfe;
+}
+
+@media(max-width:760px) {
+  .burger {
+    display:block;
+  }
+  nav {
+    display:none;
+    width:100%;
+  }
+  nav.open {
+    display:flex;
+    flex-direction:column;
+    padding-top:10px;
+  }
+  nav a {
+    margin:0;
+    padding:10px 0;
+  }
+  .hin {
+    padding:24px;
+  }
+}
+
+a:focus-visible,button:focus-visible {
+  outline:3px solid var(--sun);
+  outline-offset:2px;
+}
+
+/* ==========================================================
+   HOME PAGE (index.html): hero video, Mission and Vision panel
+   ========================================================== */
+
+.kick {
+  color:var(--g);
+  font-size:1rem!important;
+}
+
+.lead {
+  max-width:60ch;
+  color:var(--mut);
+}
+
+.mv {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:24px;
+  background:var(--gd);
+  color:#fff;
+  border-radius:14px;
+  margin:20px;
+  padding:28px;
+}
+
+.mv p {
+  margin:0;
+  opacity:.9;
+}
+
+.ic.w {
+  display:inline-block;
+  margin-right:8px;
+}
+
+.hero.vid {
+  min-height:0;
+  display:block;
+  background:#0f4a2b;
+}
+
+.hero.vid .hv {
+  position:static;
+  display:block;
+  width:100%;
+  height:auto;
+  aspect-ratio:auto 16/9;
+  object-fit:contain;
+}
+
+.hero.vid .scene:not(.hv) {
+  z-index:0;
+}
+
+.hero.vid .hv {
+  position:relative;
+  z-index:1;
+}
+
+.hero.vid .shade {
+  z-index:2;
+  background:linear-gradient(90deg,rgba(10,45,25,.65),rgba(10,45,25,0) 70%);
+}
+
+.hero.vid .hin {
+  position:absolute;
+  z-index:3;
+  left:0;
+  top:50%;
+  transform:translateY(-50%);
+}
+
+@media(max-width:760px) {
+  .hero.vid .shade {
+    display:none;
+  }
+  .hero.vid .hin {
+    position:static;
+    transform:none;
+    background:#0f4a2b;
+  }
+}
+
+/* ==========================================================
+   ABOUT US PAGE (about.html): two-column text and photo, Our Story
+   ========================================================== */
+
+.ph.big {
+  aspect-ratio:5/4;
+}
+
+.two {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:28px;
+  align-items:center;
+}
+
+.story {
+  background:var(--gl);
+  border-radius:14px;
+  margin:0 20px;
+}
+
+/* ==========================================================
+   PRODUCTS PAGE (products.html): product cards and filter tabs (cards also appear on Home and Gallery)
+   ========================================================== */
+
+.pc {
+  background:#fff;
+  border-radius:12px;
+  padding:10px;
+  box-shadow:0 2px 8px rgba(0,0,0,.07);
+}
+
+.pc h3 {
+  font-size:1.05rem;
+  margin:8px 0 2px;
+}
+
+.pc p {
+  margin:0;
+  font-size:.85rem;
+  color:var(--mut);
+}
+
+.pr {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-top:8px;
+}
+
+.stock {
+  background:var(--g);
+  color:#fff;
+  font-size:.72rem;
+  padding:2px 10px;
+  border-radius:999px;
+}
+
+.pimg,.ph {
+  position:relative;
+  border-radius:10px;
+  overflow:hidden;
+  aspect-ratio:4/3;
+  margin:0;
+  background:#cfe6d4;
+}
+
+.pimg img,.ph img {
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  z-index:2;
+}
+
+.pimg::before,.ph::before {
+  content:"";
+  position:absolute;
+  inset:0;
+  background:var(--bgc,linear-gradient(#bfe3f2,#7bbf63));
+}
+
+.pimg::after {
+  content:var(--e);
+  position:absolute;
+  inset:0;
+  display:grid;
+  place-items:center;
+  font-size:3.2rem;
+}
+
+.tomato {
+  --bgc:#fbd5cf;
+}
+
+.pepper {
+  
+  --bgc:#d3ecc3;
+}
+
+.onion {
+  
+  --bgc:#f1e0c4;
+}
+
+.carrot {
+  
+  --bgc:#fde0bd;
+}
+
+.cabbage {
+  
+  --bgc:#d9efc9;
+}
+
+.spinach {
+  
+  --bgc:#bfe0b4;
+}
+
+.lettuce {
+  
+  --bgc:#e0f2c8;
+}
+
+.herbs {
+  
+  --bgc:#cfe9d4;
+}
+
+.fruit {
+  
+  --bgc:#fbd9d0;
+}
+
+.tabs {
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-bottom:20px;
+}
+
+.tab {
+  border:0;
+  background:var(--gl);
+  padding:8px 20px;
+  border-radius:999px;
+  font:inherit;
+  cursor:pointer;
+}
+
+.tab.on {
+  background:var(--g);
+  color:#fff;
+}
+
+.note {
+  color:var(--mut);
+  font-size:.85rem;
+  margin-top:18px;
+}
+
+/* ==========================================================
+   SERVICES PAGE (services.html): Why Choose Us panel and bottom banner
+   ========================================================== */
+
+.why {
+  background:var(--gd);
+  color:#fff;
+  border-radius:14px;
+  padding:24px;
+  max-width:420px;
+}
+
+.why ul {
+  list-style:none;
+  padding:0;
+  margin:0;
+}
+
+.why li::before {
+  content:"✔ ";
+  color:var(--sun);
+}
+
+.cta {
+  margin:10px 20px 30px;
+  min-height:240px;
+}
+
+/* ==========================================================
+   GALLERY PAGE (gallery.html): picture tiles and captions
+   ========================================================== */
+
+.ph {
+  aspect-ratio:4/3;
+}
+
+.ph figcaption {
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0;
+  z-index:3;
+  background:linear-gradient(transparent,rgba(0,0,0,.6));
+  color:#fff;
+  padding:18px 10px 8px;
+  font-size:.88rem;
+}
+
+.g-harvest::before,.g-produce::before,.g-market::before {
+  --bgc:linear-gradient(#ffe2a8,#e9a640);
+}
+
+.g-pack::before {
+  --bgc:linear-gradient(#e6d3b3,#b99468);
+}
+
+.g-team::before {
+  --bgc:linear-gradient(#cfe0f5,#8fb4de);
+}
+
+/* ==========================================================
+   CONTACT PAGE (contact.html): message form, map box, social icons
+   ========================================================== */
+
+form label {
+  display:block;
+  margin:12px 0;
+  font-weight:600;
+  font-size:.9rem;
+}
+
+input,textarea {
+  display:block;
+  width:100%;
+  margin-top:4px;
+  padding:10px;
+  border:1px solid #b9cbbd;
+  border-radius:8px;
+  font:inherit;
+}
+
+input:focus,textarea:focus {
+  outline:2px solid var(--g);
+}
+
+#msg {
+  font-size:.9rem;
+  color:var(--g);
+}
+
+.map {
+  display:block;
+  margin-top:16px;
+  background:var(--gl);
+  padding:50px 16px;
+  border-radius:12px;
+  text-align:center;
+  text-decoration:none;
+}
+
+.soc.dark a {
+  background:var(--g);
+  color:#fff;
+}
+
+/* ==========================================================
+   SITE MAP PAGE (sitemap.html): page list boxes
+   ========================================================== */
+
+.sm ul {
+  text-align:left;
+  margin:8px 0 0;
+  padding-left:18px;
+  font-size:.9rem;
+}
+
+.sm h3 a {
+  text-decoration:none;
+}
+
+/* ==========================================================
+   9. JAVASCRIPT SECTION (styles for features added by app.js)
+   ========================================================== */
+
+/* ===== START JAVASCRIPT SECTION ===== */
+
+/* ---- A. BASICS ---- */
+[hidden] { display: none !important; }       /* lets filters hide cards */
+html { scroll-behavior: smooth; }            /* smooth jumping to top/anchors */
+
+/* ---- B. HEADER: shadow, Search button, Cart button ---- */
+.top { transition: box-shadow .2s; }
+.top.scrolled { box-shadow: 0 4px 14px rgba(0, 0, 0, .12); }
+
+.searchbtn,
+.cartbtn {
+  border: 1px solid var(--g);
+  background: #fff;
+  color: var(--ink);
+  border-radius: 999px;
+  padding: 6px 14px;
+  font: inherit;
+  font-size: .9rem;
+  cursor: pointer;
+}
+.searchbtn { margin-left: auto; margin-right: 8px; }
+.cartbtn   { margin-right: 10px; }
+#cartn {
+  background: var(--g);
+  color: #fff;
+  border-radius: 999px;
+  padding: 0 8px;
+  margin-left: 4px;
+  font-size: .85rem;
+}
+
+/* ---- C. SEARCH WINDOW (opened by the header Search button) ---- */
+#sp {
+  position: fixed; inset: 0;
+  background: rgba(0, 0, 0, .55);
+  display: none;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 70px 14px 14px;
+  z-index: 65;
+}
+#sp.open { display: flex; }
+#sp .spbox {
+  background: #fff;
+  width: min(560px, 100%);
+  max-height: 80vh;
+  overflow: auto;
+  border-radius: 14px;
+  padding: 14px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, .3);
+}
+#sp .sprow { display: flex; gap: 8px; }
+#sp .sprow input { margin: 0; }
+#sp .spx { border: 0; background: var(--gl); border-radius: 10px; width: 44px; font-size: 1.1rem; cursor: pointer; }
+#sp .spl { list-style: none; margin: 12px 0 0; padding: 0; }
+#sp .spl li { display: flex; align-items: center; gap: 10px; padding: 10px 4px; border-bottom: 1px solid #e3e9e4; }
+#sp .si { font-size: 1.6rem; }
+#sp .sn { flex: 1; }
+#sp .sn small { display: block; color: var(--mut); }
+#sp .sadd { width: auto; margin: 0; padding: 6px 12px; font-size: .85rem; }
+#sp .sview { font-size: .85rem; color: var(--g); }
+#sp .none { color: var(--mut); justify-content: center; }
+
+/* ---- D. PRODUCTS PAGE: search row, empty message, "Add to cart" button ---- */
+.search-row { display: flex; gap: 8px; margin-bottom: 14px; max-width: 460px; }
+.search-row .search { margin: 0; }
+.search-row .gosearch { padding: 8px 20px; }
+.empty { text-align: center; color: var(--mut); padding: 20px; }
+
+.add {
+  width: 100%;
+  margin-top: 10px;
+  padding: 8px;
+  border: 1px solid var(--g);
+  background: #fff;
+  color: var(--g);
+  border-radius: 999px;
+  font: inherit;
+  cursor: pointer;
+}
+
+/* ---- E. CART SIDE PANEL ---- */
+#order {
+  position: fixed; top: 0; right: 0;
+  height: 100%;
+  width: min(360px, 92vw);
+  background: #fff;
+  box-shadow: -8px 0 24px rgba(0, 0, 0, .2);
+  padding: 20px;
+  z-index: 50;
+  transform: translateX(105%);
+  transition: transform .3s;
+  display: flex;
+  flex-direction: column;
+}
+#order.open { transform: none; }
+#order .oh { display: flex; justify-content: space-between; align-items: center; }
+#order .oc { border: 0; background: none; font-size: 1.3rem; cursor: pointer; }
+#order .ol { list-style: none; margin: 10px 0; padding: 0; overflow: auto; flex: 1; }
+#order .ol li { display: flex; justify-content: space-between; gap: 10px; padding: 10px 0; border-bottom: 1px solid #dde; }
+#order .ol small { display: block; color: var(--mut); }
+#order .q button { width: 28px; height: 28px; border-radius: 50%; border: 1px solid var(--g); background: #fff; cursor: pointer; margin: 0 6px; }
+#order .ot { font-weight: 600; }
+#order .btn:disabled { opacity: .5; cursor: not-allowed; }
+#order .oclear { margin-top: 8px; border: 0; background: none; color: var(--mut); cursor: pointer; text-decoration: underline; }
+
+/* ---- F. GALLERY PICTURE VIEWER ---- */
+#lb { position: fixed; inset: 0; background: rgba(0, 0, 0, .88); display: none; align-items: center; justify-content: center; z-index: 70; }
+#lb.open { display: flex; }
+#lb .lc .ph { width: min(88vw, 760px); aspect-ratio: 4 / 3; }
+#lb button { position: absolute; border: 0; background: rgba(255, 255, 255, .15); color: #fff; font-size: 2rem; width: 48px; height: 48px; border-radius: 50%; cursor: pointer; }
+#lb .lx { top: 16px; right: 16px; }
+#lb .lp { left: 14px; }
+#lb .ln { right: 14px; }
+
+/* ---- G. CONTACT FORM ERRORS ---- */
+.err { display: block; color: #b3261e; font-weight: 400; min-height: 1.2em; }
+
+/* ---- H. HOME VIDEO PAUSE BUTTON ---- */
+.vtoggle { position: absolute; right: 14px; bottom: 14px; z-index: 4; border: 0; border-radius: 999px; padding: 6px 14px; background: rgba(0, 0, 0, .55); color: #fff; font: inherit; font-size: .85rem; cursor: pointer; }
+
+/* ---- I. BACK-TO-TOP ARROW AND MESSAGE POP-UP ---- */
+#totop { position: fixed; right: 18px; bottom: 18px; width: 44px; height: 44px; border: 0; border-radius: 50%; background: var(--g); color: #fff; font-size: 1.3rem; cursor: pointer; opacity: 0; pointer-events: none; transition: opacity .25s, transform .2s; z-index: 30; }
+#totop.on { opacity: 1; pointer-events: auto; }
+#toast { position: fixed; left: 50%; bottom: 24px; transform: translate(-50%, 20px); background: var(--gd); color: #fff; padding: 10px 18px; border-radius: 999px; opacity: 0; transition: .3s; z-index: 80; max-width: 90vw; text-align: center; font-size: .9rem; }
+#toast.on { opacity: 1; transform: translate(-50%, 0); }
+
+/* ---- J. FADE-IN WHEN SCROLLING ---- */
+.reveal { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; }
+.reveal.show { opacity: 1; transform: none; }
+
+/* ---- K. BUTTON HOVER EFFECTS (mouse only, so phones are not affected) ---- */
+.btn, .tab, .add, .searchbtn, .cartbtn, .soc a, #totop, .vtoggle, #sp .spx, #order .q button {
+  transition: background .2s, color .2s, transform .15s, box-shadow .2s, border-color .2s;
+}
+@media (hover: hover) {
+  .btn:hover            { background: var(--gd); transform: translateY(-2px); box-shadow: 0 6px 14px rgba(15, 74, 43, .35); }
+  .tab:hover            { background: #cfe6d8; transform: translateY(-1px); }
+  .tab.on:hover         { background: var(--gd); }
+  .add:hover            { background: var(--g); color: #fff; transform: translateY(-1px); box-shadow: 0 4px 10px rgba(31, 107, 63, .3); }
+  .searchbtn:hover,
+  .cartbtn:hover        { background: var(--g); color: #fff; transform: translateY(-1px); }
+  .cartbtn:hover #cartn { background: #fff; color: var(--g); }
+  .soc a:hover          { transform: translateY(-3px) scale(1.08); box-shadow: 0 6px 12px rgba(0, 0, 0, .25); }
+  #totop:hover          { transform: translateY(-3px); background: var(--gd); }
+  .vtoggle:hover        { background: rgba(0, 0, 0, .8); }
+  #sp .spx:hover        { background: #cfe6d8; }
+  #order .q button:hover{ background: var(--g); color: #fff; }
+  #order .oclear:hover  { color: var(--ink); }
+  nav a:hover           { color: var(--g); }
+  .pager a:hover        { text-decoration: underline; }
+  .ql a:hover           { text-decoration: underline; opacity: 1; }
+  #lb button:hover      { background: rgba(255, 255, 255, .3); }
+  /* cards lift a little */
+  .pc, .fc              { transition: transform .2s, box-shadow .2s; }
+  .pc:hover, .fc:hover  { transform: translateY(-4px); box-shadow: 0 10px 22px rgba(0, 0, 0, .12); }
+  .gi .ph img           { transition: transform .4s; }
+  .gi:hover .ph img     { transform: scale(1.06); cursor: zoom-in; }
+}
+/* Keyboard users get the same visible highlight */
+.btn:focus-visible, .tab:focus-visible, .add:focus-visible, .searchbtn:focus-visible, .cartbtn:focus-visible { box-shadow: 0 0 0 3px var(--sun); }
+
+/* ---- L. REDUCED MOTION (people who turn off animations) ---- */
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+  html { scroll-behavior: auto; }
+  .btn:hover, .add:hover, .pc:hover, .fc:hover { transform: none; }
+}
+
+/* ===== END JAVASCRIPT SECTION ===== */
+/* NUCLEAR FIX - PASTE AT VERY BOTTOM */
+.hero{
+  position: relative !important;
+  height: auto !important;
+  min-height: 520px !important;
+  overflow: hidden !important;
+  display: block !important;
+}
+.hero > div:first-child{
+  position: relative !important;
+  min-height: 520px !important;
+  display: grid !important;
+  place-items: center !important;
+}
+.scene_bv, .shade{
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+.g4, .fc, .fc-image, .bin{
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+  right: auto !important;
+  bottom: auto !important;
+  transform: none !important;
+}
